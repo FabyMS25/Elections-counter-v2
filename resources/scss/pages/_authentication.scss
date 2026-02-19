@@ -1,0 +1,166 @@
+//
+// _authentication.scss
+//
+
+
+.auth-page-wrapper{
+    .auth-page-content{
+        padding-bottom: $footer-height;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+    }
+    .footer{
+        left: 0;
+        background-color: transparent;
+        color: var(--#{$prefix}body-color);
+    }
+}
+
+.auth-one-bg-position{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 380px;
+    
+    @media (max-width: 575.98px) {
+        height: 280px;
+    }
+}
+
+.auth-one-bg{
+    background-image: url("../images/file.jpg");
+    background-position: center;
+    background-size: cover;
+
+    .bg-overlay{
+        background: linear-gradient(to right, darken($primary, 6%), $primary);
+        opacity: 0.9;
+    }
+}
+
+.shape{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    >svg {
+        width: 100%;
+        height: auto;
+        fill: var(--#{$prefix}body-bg);
+    }
+}
+
+// auth-pass-inputgroup
+
+.auth-pass-inputgroup{
+    input[type="text"] + .btn .ri-eye-fill{
+        &:before{
+            content: "\ecb6";
+        }
+    }
+}
+
+.particles-js-canvas-el{
+    position: relative;
+}
+
+// signin card title
+
+.signin-other-title{
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        right: 0;
+        border-top: 1px dashed var(--#{$prefix}border-color);
+        top: 10px;
+    }
+
+    .title{
+        display: inline-block;
+        position: relative;
+        z-index: 9;
+        background-color: var(--#{$prefix}secondary-bg);
+        padding: 2px 16px;
+    }
+}
+
+// Auth cover
+
+.auth-bg-cover{
+    background: $auth-bg-cover;
+
+    > .bg-overlay{
+        background-image: url("../images/cover-pattern.png");
+        background-position: center;
+        background-size: cover;
+        opacity: 1;
+        background-color: transparent;
+    }
+
+    .footer{
+        color: rgba($white, .5);
+    }
+}
+
+//passowrd validations 
+#password-contain {
+    display: none;
+
+    p {
+        padding-left: 13px;
+
+        &.valid {
+            color: $success;
+
+            &::before {
+                position: relative;
+                left: -8px;
+                content: "✔";
+            }
+        }
+
+        &.invalid {
+            color: $danger;
+
+            &::before {
+                position: relative;
+                left: -8px;
+                content: "✖";
+            }
+        }
+    }
+}
+
+
+        .bolivian-symbol {
+            display: inline-block;
+            background: linear-gradient(135deg, #D52B1E, #007934, #F9B32A);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            line-height: 60px;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .app-name {
+            font-weight: 700;
+            color: #007934;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            font-size: 1.8rem;
+            margin-top: 10px;
+        }
+        
+        
